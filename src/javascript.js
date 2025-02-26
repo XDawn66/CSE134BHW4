@@ -30,7 +30,6 @@ function formsubmit(event) {
   let email = email_entry.value;
   let message = text_entry.value;
   let topic = topic_entry.value;
-  console.log(name, email, message, topic);
   const fetchData = new URLSearchParams();
   fetchData.append("name", name);
   fetchData.append("email", email);
