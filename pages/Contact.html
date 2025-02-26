@@ -28,12 +28,16 @@
             <div class="field">
               <label for="name">Name</label>
               <input type="text" name="name" id="name" required />
+              <output id="name_error"></output>
+              <output id="name_info"></output>
             </div>
 
             <!-- Email Field -->
             <div class="field">
               <label for="email">Email</label>
               <input type="email" name="email" id="email" required />
+              <output id="mail_error"></output>
+              <output id="mail_info"></output>
             </div>
           </div>
         </fieldset>
@@ -44,6 +48,8 @@
           <div class="field">
             <label for="message">Message</label>
             <textarea name="message" id="message" rows="3" required></textarea>
+            <output id="message_error"></output>
+            <output id="message_info"></output>
           </div>
         </fieldset>
 

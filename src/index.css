@@ -679,11 +679,16 @@ article p {
   .contact-form textarea,
   .contact-form select {
     font-size: 20px; /* Larger form inputs */
-    padding: 15px; /* Larger padding for form inputs */
+    padding: 13px; /* Larger padding for form inputs */
   }
 
   .contact-form input[type="submit"] {
     font-size: 20px; /* Larger submit button */
     padding: 15px 30px; /* Bigger submit button */
   }
+}
+
+h1 b {
+  display: flex;
+  justify-content: center;
 }

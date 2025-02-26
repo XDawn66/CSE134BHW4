@@ -45,5 +45,10 @@ function formsubmit(event) {
   })
     .then((response) => response.json()) // Convert response to JSON
     .then((data) => console.log("Server Response:", data))
+    .then(alert("form submitted"))
     .catch((error) => console.error("Error:", error));
+
+  name_entry.value = "";
+  email_entry.value = "";
+  text_entry.value = "";
 }
