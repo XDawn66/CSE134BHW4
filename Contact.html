@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My portfolio</title>
+  </head>
+  <nav id="nav">
+    <ul class="links">
+      <li class="active"><a href="../Home.html">Home</a></li>
+    </ul>
+    <ul class="links">
+      <li class="active"><a href="About.html">About Me</a></li>
+    </ul>
+    <ul class="links">
+      <li class="active"><a href="Project.html">Projects</a></li>
+    </ul>
+    <ul class="links">
+      <li class="active"><a href="Demo.html">Demo</a></li>
+    </ul>
+    <ul class="links">
+      <li class="active"><a href="Contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <body>
+    <h1><b>Send me a message</b></h1>
+
+    <section>
+      <form method="post" action="#">
+        <!-- Grouping form fields with <fieldset> -->
+        <fieldset>
+          <legend>Contact Information</legend>
+
+          <!-- Name Field -->
+          <div class="fields">
+            <div class="field">
+              <label for="name">Name</label>
+              <input type="text" name="name" id="name" required />
+              <!-- for bot checking -->
+              <input type="hidden" name="possible_bot" value="true" />
+            </div>
+
+            <!-- Email Field -->
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" name="email" id="email" required />
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- Message Field -->
+        <fieldset>
+          <legend>Your Message</legend>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea name="message" id="message" rows="3" required></textarea>
+          </div>
+        </fieldset>
+
+        <div class="field">
+          <label for="topic">Topic</label>
+          <select name="topic" id="topic">
+            <optgroup label="Design">
+              <option value="AI Design">AI Design</option>
+              <option value="Web Design">Web Design</option>
+            </optgroup>
+            <optgroup label="Development">
+              <option value="Web Development">Web Development</option>
+              <option value="App Development">App Development</option>
+            </optgroup>
+            <optgroup label="Bugs">
+              <option value="Potential Bugs">Potential Bugs</option>
+              <option value="Exisiting Bugs">Exisiting Bugs</option>
+            </optgroup>
+          </select>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="button" onclick="formsubmit()">Send Message</button>
+      </form>
+    </section>
+
+    <hr />
+    <footer id="footer">
+      <section class="split contact">
+        <h2>Contact Information</h2>
+        <address>
+          Email: <a href="mailto:johndoe@example.com">johndoe@example.com</a
+          ><br />
+          Phone: +1 123 456 7890<br />
+          Website:
+          <a href="https://www.johndoeportfolio.com" target="_blank"
+            >www.johndoeportfolio.com</a
+          >
+        </address>
+
+        <aside>
+          <h3>Social</h3>
+          <ul class="icons alt">
+            <li>
+              <a href="#" class=""><span class="label">Twitter</span></a>
+            </li>
+            <li>
+              <a href="#" class=""><span class="label">Facebook</span></a>
+            </li>
+            <li>
+              <a href="#" class=""><span class="label">Instagram</span></a>
+            </li>
+            <li>
+              <a href="#" class=""><span class="label">GitHub</span></a>
+            </li>
+          </ul>
+        </aside>
+      </section>
+    </footer>
+
+    <section id="testing">
+      <h1>Canvas Example: Drawing a Rectangle</h1>
+
+      <!-- Define the canvas element -->
+      <canvas id="myCanvas" width="400" height="400"></canvas>
+
+      <dialog id="myDialog">
+        <p>This is a dialog box!</p>
+        <button onclick="document.getElementById('myDialog').close()">
+          Close
+        </button>
+      </dialog>
+      <button onclick="document.getElementById('myDialog').show()">
+        Open Dialog
+      </button>
+      <custom-button>Click Me</custom-button>
+      <hello-world></hello-world>
+      <div>
+        <label>Extra credit</label>
+        <math>
+          <mi>E</mi>
+          <mo>=</mo>
+          <mi>m</mi>
+          <msup>
+            <mi>c</mi>
+            <mn>2</mn>
+          </msup>
+        </math>
+      </div>
+      <meta
+        name="keywords"
+        content="Einstein, E=mc^2, physics, famous equation"
+      />
+      <meta name="author" content="Albert Einstein" />
+    </section>
+
+    <script src="src/javascript.js"></script>
+  </body>
+</html>
