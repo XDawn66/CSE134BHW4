@@ -41,7 +41,6 @@ function formsubmit(event) {
     method: "POST",
     headers: {
       "Content-Type": "application/x-www-form-urlencoded",
-      "User-Agent": "Chrome",
     },
     body: fetchData.toString(),
   })
