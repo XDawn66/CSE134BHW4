@@ -24,7 +24,8 @@ class HelloWorld extends HTMLElement {
 // Register the custom element
 customElements.define("hello-world", HelloWorld);
 
-function formsubmit() {
+function formsubmit(event) {
+  event.preventDefault();
   let name = name_entry.value;
   let email = email_entry.value;
   let message = text_entry.value;
