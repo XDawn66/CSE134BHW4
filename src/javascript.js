@@ -25,11 +25,11 @@ class HelloWorld extends HTMLElement {
 customElements.define("hello-world", HelloWorld);
 
 function formsubmit() {
-  let name = name_entry.textContent;
-  let email = email_entry.textContent;
-  let message = text_entry.textContent;
+  let name = name_entry.value;
+  let email = email_entry.value;
+  let message = text_entry.value;
   let topic = topic_entry.value;
-
+  console.log(name, email, message, topic);
   const fetchData = new URLSearchParams();
   fetchData.append("name", name);
   fetchData.append("email", email);
