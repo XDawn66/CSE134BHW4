@@ -15,8 +15,19 @@
     </ul>
   </nav>
   <body>
+    <noscript>
+      <style>
+        #theme {
+          display: none;
+        }
+      </style>
+      <p>
+        JavaScript is required for dark mode toggle functionality. Please enable
+        JavaScript to use this feature.
+      </p>
+    </noscript>
+    <button id="theme">🌞</button>
     <h1><b>Send me a message</b></h1>
-
     <section class="contact-form">
       <form onsubmit="formsubmit(event)" novalidate>
         <!-- Grouping form fields with <fieldset> -->
@@ -145,13 +156,6 @@
       <!-- Define the canvas element -->
       <canvas id="myCanvas" width="400" height="400"></canvas>
 
-      <script>
-        var canvas = document.getElementById("myCanvas");
-        var ctx = canvas.getContext("2d");
-
-        ctx.fillStyle = "#3498db"; // Set the fill color to blue
-        ctx.fillRect(50, 50, 200, 100); // Draw a rectangle at (50,50) with width 200 and height 100
-      </script>
       <dialog id="myDialog">
         <p>This is a dialog box!</p>
         <button onclick="document.getElementById('myDialog').close()">

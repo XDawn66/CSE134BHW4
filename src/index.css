@@ -171,6 +171,20 @@ nav ul li a {
   margin-bottom: 10px;
 }
 
+.light-mode .skill {
+  background-color: white;
+  color: black;
+}
+
+.light-mode .skills table {
+  background-color: white;
+  color: black;
+}
+
+.light-mode table caption {
+  background-color: white;
+}
+
 .skills table th,
 .skills table td {
   padding: 12px;
@@ -387,6 +401,10 @@ blockquote {
   margin: 0 1rem;
 }
 
+.light-mode blockquote {
+  background-color: wheat;
+}
+
 #more {
   margin: 1rem;
 }
@@ -407,6 +425,11 @@ figcaption {
   text-align: left;
   margin: 1rem;
   padding: 2%;
+}
+
+.light-mode #footer {
+  background-color: rgb(154, 146, 146);
+  color: black;
 }
 
 #footer h2 {
@@ -754,9 +777,10 @@ input:user-invalid {
   }
 }
 
-#theme-toggle {
+#theme {
   display: flex;
   justify-content: right;
-  margin: 1rem;
+  margin-left: auto;
+  margin-right: 1rem;
   padding: 1rem;
 }

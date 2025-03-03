@@ -162,16 +162,17 @@ function validate(inputID) {
 
 document.addEventListener("DOMContentLoaded", () => {
   // Apply saved theme
-  const themeToggleButton = document.getElementById("theme-toggle"); // Select the button
-
+  const themeToggleButton = document.getElementById("theme"); // Select the button
   if (!themeToggleButton) {
     console.error("Theme toggle button not found!");
     return;
   }
   if (localStorage.getItem("theme") === "light") {
+    console.log("lightmode");
     document.body.classList.add("light-mode");
     themeToggleButton.textContent = "🌞";
   } else {
+    console.log("no lightmode");
     document.body.classList.add("dark-mode");
     themeToggleButton.textContent = "🌙";
   }
