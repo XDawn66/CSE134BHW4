@@ -8,6 +8,9 @@ use nested and scoped */
 :root {
   --blue-rgb: 85, 95, 115;
   --green-rgb: 125 161 35;
+  --background-color: #050505;
+
+  color: #fff;
 }
 
 * {
@@ -22,10 +25,24 @@ nav {
   padding: 5px;
 }
 
+body.light-mode {
+  --background-color: white;
+  --text-color: #333;
+  --button-color: #333;
+}
+
+img.light-mode {
+  border: 3px solid black;
+}
+
+nav ul li a.light-mode {
+  color: black;
+}
+
 body {
   font-family: "Work Sans", sans-serif;
-  background-color: #050505;
-  color: #fff;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 h1,
@@ -691,4 +708,55 @@ article p {
 h1 b {
   display: flex;
   justify-content: center;
+}
+
+input:user-valid {
+  border: 2px solid green;
+}
+input:user-invalid {
+  border: 2px dashed red;
+}
+
+#charCountContainer {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+#charCountText {
+  font-weight: bold;
+}
+
+.warning {
+  color: orange;
+}
+
+.error {
+  color: red;
+}
+
+.error_container {
+  display: block;
+}
+
+.flash {
+  animation: flash-animation 1s ease-in-out;
+}
+@keyframes flash-animation {
+  0% {
+    border: 2px solid red; /* Starting with a red border */
+  }
+  50% {
+    border: 2px solid yellow; /* Flash to yellow at halfway */
+  }
+  100% {
+    border: 2px solid red; /* End with a red border */
+  }
+}
+
+#theme-toggle {
+  display: flex;
+  justify-content: right;
+  margin: 1rem;
+  padding: 1rem;
 }

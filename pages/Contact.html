@@ -18,7 +18,7 @@
     <h1><b>Send me a message</b></h1>
 
     <section class="contact-form">
-      <form onsubmit="formsubmit(event)">
+      <form onsubmit="formsubmit(event)" novalidate>
         <!-- Grouping form fields with <fieldset> -->
         <fieldset>
           <legend>Contact Information</legend>
@@ -27,17 +27,35 @@
           <div class="fields">
             <div class="field">
               <label for="name">Name</label>
-              <input type="text" name="name" id="name" required />
-              <output id="name_error"></output>
-              <output id="name_info"></output>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                minlength="3"
+                maxlength="20"
+                required
+              />
+              <div class="error_container">
+                <output id="name_error"></output>
+                <output id="name_info"></output>
+              </div>
             </div>
 
             <!-- Email Field -->
             <div class="field">
               <label for="email">Email</label>
-              <input type="email" name="email" id="email" required />
-              <output id="mail_error"></output>
-              <output id="mail_info"></output>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                minlength="3"
+                maxlength="50"
+                required
+              />
+              <div class="error_container">
+                <output id="mail_error"></output>
+                <output id="mail_info"></output>
+              </div>
             </div>
           </div>
         </fieldset>
@@ -47,9 +65,21 @@
           <legend>Your Message</legend>
           <div class="field">
             <label for="message">Message</label>
-            <textarea name="message" id="message" rows="3" required></textarea>
-            <output id="message_error"></output>
-            <output id="message_info"></output>
+            <textarea
+              name="message"
+              id="message"
+              rows="3"
+              minlength="1"
+              maxlength="300"
+              required
+            ></textarea>
+            <div id="charCountContainer">
+              <span id="countdown"></span>
+            </div>
+            <div class="error_container">
+              <output id="message_error"></output>
+              <output id="message_info"></output>
+            </div>
           </div>
         </fieldset>
 
